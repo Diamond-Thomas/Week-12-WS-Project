@@ -1,0 +1,3 @@
+### What did you accomplish in this phase? What is the practical difference between a regular expression with start/end anchors (^...$) and one without them when checking the length of a username?
+
+In this phase I created two different validations for my code to check for  using regular expressions. The practical difference between a regular expression with start/end anchors (^...$) and one without them is the that with it it will check the whole thing instead of just the first one it runs into.
