@@ -21,6 +21,35 @@ if (phoneRequirements.test(phone)) {
   return phone.replace(phoneRequirements, "($1) $2-$3");
 }
 }
+function processRegistration(user){
+  const errors = [];
+  if (!validateName(user.name)) {
+    errors.push("Invalid Name");
+  }
+  if (!validateUsername(user.username)) {
+    errors.push("Invalid Username");
+  }
+  if (!validatePhone(user.phone)) {
+    errors.push("Invalid Phone Number");
+  }
+
+  if (errors.length > 0) {
+    return {
+      success: false,
+      errors: errors
+    };
+  }
+
+  return {
+    success: true,
+    data: {
+      name: user.name,
+      username: user.username,
+      phone: formatPhoneNumber(user.phone),
+      discountApplied: validatePromoCode(user.promoCode)
+    }
+  };
+}
 
 
 
@@ -73,3 +102,9 @@ console.log(validateName(sampleUsers[1].name));
 console.log(validateUsername(sampleUsers[1].username));
 console.log(validatePhone(sampleUsers[1].phone));
 console.log(formatPhoneNumber(sampleUsers[1].phone));
+
+
+
+for (const users of sampleUsers) {
+  console.log(processRegistration(users));
+}
