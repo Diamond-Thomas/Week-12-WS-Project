@@ -15,6 +15,13 @@ function validatePromoCode(promo) {
   const promoRequirements = /^summer$/i;
   return promoRequirements.test(promo);
 }
+function formatPhoneNumber(phone){
+const phoneRequirements = /^(\d{3})[-.]?(\d{3})[-.]?(\d{4})$/;
+if (phoneRequirements.test(phone)) {
+  return phone.replace(phoneRequirements, "($1) $2-$3");
+}
+}
+
 
 
 
@@ -60,7 +67,9 @@ const sampleUsers = [
 console.log(validateName(sampleUsers[0].name));
 console.log(validateUsername(sampleUsers[0].username));
 console.log(validatePhone(sampleUsers[0].phone));
+console.log(formatPhoneNumber(sampleUsers[0].phone));
 
 console.log(validateName(sampleUsers[1].name));
 console.log(validateUsername(sampleUsers[1].username));
 console.log(validatePhone(sampleUsers[1].phone));
+console.log(formatPhoneNumber(sampleUsers[1].phone));
