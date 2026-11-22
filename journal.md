@@ -12,3 +12,6 @@ In this phase I took the phone number and created a function to format it. the g
 
 ### How did you design your processRegistration() function? Looking back across Phases 1 through 4, how did building and verifying individual regular expressions first make assembling the final pipeline easier?
 because my previous validations uses .test it would evaluate to true or false and I used that when validating the users. my validations would only push to my array if the validations returned as false and if there was any "errors" or as put in my code if the .length of the array was more that 0 then it would evaluate to false and print out the array of errors.
+
+### What bugs or unexpected results did you identify while running the full test suite? If you consulted an AI tutor for review, what advice did it provide, and what did you learn about regular expressions from this exercise?
+I didn't run into any bug when running the full test suite it worked properly. 

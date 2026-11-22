@@ -90,6 +90,18 @@ const sampleUsers = [
     username: "fiona_g",
     phone: "555-789-0123",
     promoCode: "" // No promo code provided
+  },
+  {
+    name: "john dough",
+    username: "@john",
+    phone: "111   222   3333",
+    promoCode: "" // No promo code provided
+  },
+  {
+    name: "janette dough",
+    username: "janette_d",
+    phone: "1738-3527-2000",
+    promoCode: "" // No promo code provided
   }
 ];
 
@@ -102,7 +114,6 @@ console.log(validateName(sampleUsers[1].name));
 console.log(validateUsername(sampleUsers[1].username));
 console.log(validatePhone(sampleUsers[1].phone));
 console.log(formatPhoneNumber(sampleUsers[1].phone));
-
 
 
 for (const users of sampleUsers) {
